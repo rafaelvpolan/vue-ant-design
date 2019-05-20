@@ -1,21 +1,15 @@
 <template>
- <a-locale-provider :locale="locale">
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <a-locale-provider :locale="locale">
+      <router-view/>
+    </a-locale-provider>
   </div>
-  </a-locale-provider>
 </template>
 
 <script>
 
 import ptBR from 'ant-design-vue/lib/locale-provider/pt_BR';
-
 import EventBus from '@/utils/eventBus';
-
 
 export default {
   data() {
